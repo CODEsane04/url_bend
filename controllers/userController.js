@@ -36,8 +36,10 @@ const handleUserLogin = async (req, res)=> {
         secure: true,  // Be explicit, even if it's the default
         sameSite: "None",
         path: '/',
+        maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 //----- auth end
+    console.log("✅ Cookie set successfully:", res.getHeaders()['set-cookie']);
     console.log(token);
     return res.status(200).json({message: "logged in succesfully"});
 }
