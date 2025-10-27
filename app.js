@@ -25,9 +25,7 @@ mongoose.connect(mongo_URI)
 //middlewares
 app.use(cors({
   origin: [
-    'http://localhost:3000',         // for local development
-    'https://urlfendy.vercel.app',
-    'http://172.31.26.196:3000'   // for your deployed frontend
+    'urlshortener-blush-nu.vercel.app',
   ],
   credentials: true,
 }));
