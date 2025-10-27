@@ -28,6 +28,7 @@ app.use(cors({
     'https://urlshortener-blush-nu.vercel.app',
   ],
   credentials: true,
+  optionsSuccessStatus: 200,
 }));
 
 app.use(express.json());
