@@ -31,6 +31,12 @@ app.use(cors({
   optionsSuccessStatus: 200,
 }));
 
+//debug middleware
+app.use((req, res, next) => {
+  console.log("🔹 Cookies received:", req.cookies);
+  next();
+});
+
 app.use(express.json());
 app.use(cookieParser());
 
