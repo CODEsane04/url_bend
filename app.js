@@ -24,9 +24,13 @@ mongoose.connect(mongo_URI)
 
 //middlewares
 app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
+  origin: [
+    'http://localhost:3000',         // for local development
+    'https://urlfendy.vercel.app'    // for your deployed frontend
+  ],
+  credentials: true,
 }));
+
 app.use(express.json());
 app.use(cookieParser());
 
