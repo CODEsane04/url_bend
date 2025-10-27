@@ -33,7 +33,7 @@ const handleUserLogin = async (req, res)=> {
     const token = setUser(user);
     res.cookie('token', token, {
         httpOnly: true, // Makes the cookie inaccessible to client-side JavaScript (good security)
-        sameSite: 'lax', // Be explicit, even if it's the default
+        secure: true,  // Be explicit, even if it's the default
         sameSite: "None",
     });
 //----- auth end
