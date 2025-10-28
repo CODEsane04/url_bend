@@ -20,7 +20,7 @@ async function handleGenerateNewShortUrl(req, res) {
 
     try {
 
-        const short_url = `http://localhost:8000/${UID}`;
+        const short_url = `http://urlshortener-blush-nu.vercel.app/${UID}`;
 
         await URL.create({
             shortId: UID,
