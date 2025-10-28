@@ -24,9 +24,7 @@ mongoose.connect(mongo_URI)
 
 //middlewares
 app.use(cors({
-  origin: [
-    'https://urlshortener-blush-nu.vercel.app',
-  ],
+  origin: 'https://urlshortener-blush-nu.vercel.app',
   credentials: true,
   optionsSuccessStatus: 200,
 }));
