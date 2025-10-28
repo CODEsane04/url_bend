@@ -20,7 +20,7 @@ async function handleGenerateNewShortUrl(req, res) {
 
     try {
 
-        const short_url = `http://urlshortener-blush-nu.vercel.app/${UID}`;
+        const short_url = `https://url-backend-mrpf.onrender.com/${UID}`;
 
         await URL.create({
             shortId: UID,
